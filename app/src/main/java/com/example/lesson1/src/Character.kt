@@ -2,13 +2,13 @@ package com.example.lesson1.src
 
 import kotlin.random.Random
 
-data class Character (
-    override var strength: Int,
-    override var agility: Int,
-    override var intelligence: Int,
-    override var movementSpeed: Int,
-    override var damage: Int
-) : ICharacter{
+data class Character(
+    override var strength: Int = 0,
+    override var agility: Int = 0,
+    override var intelligence: Int = 0,
+    override var movementSpeed: Int = 0,
+    override var damage: Int = 0
+) : ICharacter {
 
     fun createHero() {
         this.strength = Random.nextInt(25, 46)
@@ -20,7 +20,15 @@ data class Character (
 }
 
 class Hero(
-    override var name: String,
-    private val character: Character
-) : ICharacter by character, IHero
-//(strength, agility, intelligence, movementSpeed, damage)
+    override var name: String = "Jhon",
+    val character: Character = Character()
+) : ICharacter by character, IHero {
+    override fun toString(): String {
+        return "Hero(name $name " +
+                "strength ${character.strength}," +
+                "agility ${character.agility}," +
+                "intelligence ${character.intelligence}," +
+                "movementSpeed ${character.movementSpeed}," +
+                "damage ${character.damage})";
+    }
+}
