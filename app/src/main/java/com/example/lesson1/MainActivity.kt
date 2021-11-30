@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var submit: Button
     private lateinit var answer: TextView
     private lateinit var editText: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         if (this::submit.isInitialized) {
             submit.setOnClickListener {
                 editText = findViewById(R.id.editText1)
-                var number = Integer.parseInt((editText.text).toString())
+                val number = Integer.parseInt((editText.text).toString())
                 if (number > 0) {
                     //var result = IntArray(number + 1)
                     // for (i in 0 until number + 1) result[i] = fibonacci(i)

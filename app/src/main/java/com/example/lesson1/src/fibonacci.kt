@@ -1,6 +1,6 @@
-
-fun fibonacci(number: Int = 20):IntArray {
-    val arr = IntArray(number + 1) // array length is number+1 is because number[0] is not included in number amount
+fun fibonacci(number: Int = 20): IntArray {
+    val arr =
+        IntArray(number + 1) // array length is number+1 is because number[0] is not included in number amount
     arr[0] = 0
     arr[1] = 1
     for (i in 2 until number + 1) {
@@ -8,6 +8,7 @@ fun fibonacci(number: Int = 20):IntArray {
     }
     return arr
 }
+//fibonacci sequence with recurse
 //fun fibonacci(number: Int = 0): Int { //this function will return only number in fibonacci sequence
 //    if (number == 0) return 0
 //    else if (number == 1) return 1
