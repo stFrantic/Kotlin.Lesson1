@@ -21,17 +21,41 @@
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberSigned" />
+        android:inputType="numberSigned"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="20dp" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="48dp"
         android:text="submit" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:text="tap" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Generate" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
