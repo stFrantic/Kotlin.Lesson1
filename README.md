@@ -1,1 +1,1 @@
-Kotlin first task1. Recursion
+Kotlin first task1. Introduction in Kotlin
