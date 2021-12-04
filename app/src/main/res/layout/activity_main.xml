@@ -8,30 +8,62 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id = "@+id/showTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fibonacci sequence"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberSigned" />
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:text="submit" />
+            <Button
+                android:id="@+id/previousButton"
+                android:layout_width="110dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:text="previous" />
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="110dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:text="add" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="110dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+
+                android:text="next" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/removeButton"
+                android:layout_width="110dp"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:text="Remove" />
+        </TableRow>
+        <TextView
+            android:id="@+id/orderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </TableLayout>
 
 </LinearLayout>
