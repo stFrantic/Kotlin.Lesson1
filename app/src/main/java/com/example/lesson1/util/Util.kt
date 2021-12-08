@@ -1,11 +1,18 @@
-package com.example.lesson1
+package com.example.lesson1.util
+
+import com.example.lesson1.classes.CasualCigarettes
+import com.example.lesson1.classes.Cigarettes
+import com.example.lesson1.classes.HeatingSystem
+import com.example.lesson1.classes.Vape
 
 class Util {
 }
 fun Cigarettes.getString():String{
-    if (this is Vape) return (this as Vape).getString()
-    else if (this is HeatingSystem) return (this as HeatingSystem).getString()
-    else return (this as CasualCigarettes).getString()
+    when (this) {
+        is Vape -> return (this as Vape).getString()
+        is HeatingSystem -> return (this as HeatingSystem).getString()
+        else -> return (this as CasualCigarettes).getString()
+    }
 }
 
 fun Vape.getString(): String {

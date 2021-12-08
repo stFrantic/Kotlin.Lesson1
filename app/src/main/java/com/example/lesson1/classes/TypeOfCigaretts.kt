@@ -1,4 +1,4 @@
-package com.example.lesson1
+package com.example.lesson1.classes
 
 enum class TypeOfCigaretts(
     val type : String) {
